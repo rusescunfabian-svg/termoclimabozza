@@ -1,0 +1,28 @@
+================================================================================
+  TERMOCILMA A.B. — ce încarci pe GitHub (fără 404)
+================================================================================
+
+Încarcă ACESTE 6 fișiere în RADĂCINA repository-ului (nu într-un subfolder).
+
+  1. index.html
+  2. styles.css
+  3. script.js
+  4. privacy.html
+  5. favicon.svg
+  6. .nojekyll          ← gol; obligatoriu pentru Pages cu HTML static
+
+GREȘALA CARE DĂ 404: tragi folderul „termoclima-ab-site” ca atare.
+CORECT: deschizi folderul și tragi DOAR cele 6 fișiere de mai sus.
+
+Dacă pe Windows nu vezi .nojekyll (fișier ascuns):
+  • Pe GitHub: Add file → Create new file → nume exact .nojekyll → lasă gol → Commit.
+
+După commit:
+  Settings → Pages → Branch: main → folder / (root) → Save.
+
+Site: https://TU-USER.github.io/NUME-REPO/
+
+ În index.html caută TU-USER și NUME-REPO în tag-urile canonical / og:url / JSON-LD
+ și înlocuiește cu userul tău și numele repo-ului (opțional, pentru SEO).
+
+================================================================================
