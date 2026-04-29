@@ -1,28 +1,52 @@
 ================================================================================
-  TERMOCILMA A.B. — ce încarci pe GitHub (fără 404)
+  TERMOCILMA A.B. — GitHub Pages FĂRĂ 404 (metoda recomandată)
 ================================================================================
 
-Încarcă ACESTE 6 fișiere în RADĂCINA repository-ului (nu într-un subfolder).
+METODA A — GITHUB ACTIONS (rezolvă și cazul „am încărcat în subfolder”)
+------------------------------------------------------------------------
 
-  1. index.html
-  2. styles.css
-  3. script.js
-  4. privacy.html
-  5. favicon.svg
-  6. .nojekyll          ← gol; obligatoriu pentru Pages cu HTML static
+1. Pe PC, încarcă pe GitHub TOT conținutul folderului termoclima-ab-site, inclusiv:
+   • .github/workflows/pages.yml   (OBLIGATORIU pentru această metodă)
+   • index.html, styles.css, script.js, privacy.html, favicon.svg
+   • .nojekyll (gol)
+   • opțional: CARICA-GITHUB.txt
 
-GREȘALA CARE DĂ 404: tragi folderul „termoclima-ab-site” ca atare.
-CORECT: deschizi folderul și tragi DOAR cele 6 fișiere de mai sus.
+   Pe web: „Add file” → „Upload files” → poți trage tot folderul .github (verifică că
+   în repo apare calea .github/workflows/pages.yml).
 
-Dacă pe Windows nu vezi .nojekyll (fișier ascuns):
-  • Pe GitHub: Add file → Create new file → nume exact .nojekyll → lasă gol → Commit.
+2. Su GitHub, nel repository: Settings → Pages.
 
-După commit:
-  Settings → Pages → Branch: main → folder / (root) → Save.
+3. La „Build and deployment” → Source: NU „Deploy from a branch”.
+   Alege **GitHub Actions** (buton sau opțiune „GitHub Actions”).
 
-Site: https://TU-USER.github.io/NUME-REPO/
+4. Tab **Actions**: așteaptă workflow-ul „Deploy Pages” să fie verde (primele date
+   poate trebui să accepți permisiunile: Settings → Actions → General →
+   „Workflow permissions” → permiti read/write dacă îți cere).
 
- În index.html caută TU-USER și NUME-REPO în tag-urile canonical / og:url / JSON-LD
- și înlocuiește cu userul tău și numele repo-ului (opțional, pentru SEO).
+5. URL site (project repo):
+   https://TU-USER.github.io/NUME-REPO/
+   Exemplu: https://ion.github.io/termoclima-ab-site/
+
+6. NU deschide doar https://TU-USER.github.io/ — fără numele repository-ului e alt site
+   sau 404.
+
+
+METODA B — Deploy from branch (fără Actions)
+--------------------------------------------------------------------------------
+• index.html trebuie să fie în ROOT-ul repo-ului, NU într-un subfolder.
+• Settings → Pages → Branch main → / (root).
+• Dacă vezi în repo: termoclima-ab-site/index.html → e GREȘIT pentru metoda B.
+  Folosește metoda A sau mută fișierele în root.
+
+
+Fișiere minime (metoda A)
+--------------------------------------------------------------------------------
+  .github/workflows/pages.yml
+  index.html
+  styles.css
+  script.js
+  privacy.html
+  favicon.svg
+  .nojekyll
 
 ================================================================================
